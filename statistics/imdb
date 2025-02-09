@@ -1,0 +1,108 @@
+aka_name id 1 901343
+aka_name person_id 4 4167489
+aka_name name  
+aka_name imdb_index 0 
+aka_name name_pcode_cf 0 
+aka_name name_pcode_nf 0 
+aka_name surname_pcode 0 
+aka_name md5sum  
+aka_title id 1 377960
+aka_title movie_id 0 2525672
+aka_title title  
+aka_title imdb_index 0 
+aka_title kind_id 1 7
+aka_title production_year 0 2016
+aka_title phonetic_code 0 
+aka_title episode_of_id 0 25391
+aka_title season_nr 0 63
+aka_title episode_nr 0 4315
+aka_title note 0 
+aka_title md5sum  
+cast_info id 1 1848461544
+cast_info person_id 1 4061926
+cast_info movie_id 1 128941575
+cast_info person_role_id 1 3140339
+cast_info note 0 
+cast_info nr_order 0 1115798165
+cast_info role_id 1 11
+char_name id 1 3140339
+char_name name  
+char_name imdb_index 0 
+char_name imdb_id 0 0
+char_name name_pcode_nf 0 
+char_name surname_pcode 0 
+char_name md5sum  
+comp_cast_type id 1 4
+comp_cast_type kind  
+company_name id 1 234997
+company_name name 0 
+company_name country_code 0 
+company_name imdb_id 0 0
+company_name name_pcode_nf 0 
+company_name name_pcode_sf 0 
+company_name md5sum  
+company_type id 1 4
+company_type kind  
+complete_cast id 1 135086
+complete_cast movie_id 285 2528312
+complete_cast subject_id 1 2
+complete_cast status_id 3 4
+info_type id 1 113
+info_type info  
+keyword id 1 134170
+keyword keyword  
+keyword phonetic_code 0 
+kind_type id 1 7
+kind_type kind  
+link_type id 1 18
+link_type link  
+movie_companies id 1 133065579
+movie_companies movie_id 2 128941345
+movie_companies company_id 1 234997
+movie_companies company_type_id 1 2
+movie_companies note  
+movie_info id 1 756621720
+movie_info movie_id 1 128942030
+movie_info info_type_id 1 110
+movie_info info  
+movie_info note  
+movie_info_idx id 1 70381785
+movie_info_idx movie_id 2 128941393
+movie_info_idx info_type_id 99 113
+movie_info_idx info  
+movie_info_idx note 
+movie_keyword id 1 230720430
+movie_keyword movie_id 2 128941571
+movie_keyword keyword_id 1 134170
+movie_link id 1 29997
+movie_link movie_id 2 186175
+movie_link linked_movie_id 284 2524994
+movie_link link_type_id 1 17
+name id 1 4167491
+name name  
+name imdb_index 0 
+name imdb_id 0 0
+name gender 0 
+name name_pcode_cf 0 
+name name_pcode_nf 0 
+name surname_pcode 0 
+name md5sum  
+person_info id 1 2963664
+person_info person_id 4 4167491
+person_info info_type_id 15 39
+person_info info  
+person_info note 0 
+role_type id 1 12
+role_type role  
+title id 1 128943912
+title title  
+title imdb_index  
+title kind_id 0 7
+title production_year 1880 2019
+title imdb_id 
+title phonetic_code  
+title episode_of_id 2 2528186
+title season_nr 1 2013
+title episode_nr 1 91821
+title series_years  
+title md5sum  

@@ -1,0 +1,63 @@
+customer c_custkey 1 15000000
+customer c_name  
+customer c_address  
+customer c_nationkey 0 24
+customer c_phone  
+customer c_acctbal  
+customer c_mktsegment  
+customer c_comment  
+lineitem l_orderkey 1 591737955
+lineitem l_partkey 1 20000000
+lineitem l_suppkey 1 1000000
+lineitem l_linenumber 1 7
+lineitem l_quantity  
+lineitem l_extendedprice  
+lineitem l_discount  
+lineitem l_tax  
+lineitem l_returnflag  
+lineitem l_linestatus  
+lineitem l_shipdate 694310400 912470400
+lineitem l_commitdate 696816000 909792000
+lineitem l_receiptdate 694396800 915062400
+lineitem l_shipinstruct  
+lineitem l_shipmode  
+lineitem l_comment  
+nation n_nationkey 0 24
+nation n_name  
+nation n_regionkey 0 4
+nation n_comment  
+orders o_orderkey 1 600000000
+orders o_custkey 1 14999999
+orders o_orderstatus  
+orders o_totalprice  
+orders o_orderdate 694224000 902016000
+orders o_orderpriority  
+orders o_clerk  
+orders o_shippriority 0 0
+orders o_comment  
+part p_partkey 1 20000000
+part p_name  
+part p_mfgr  
+part p_brand  
+part p_type  
+part p_size 1 50
+part p_container  
+part p_retailprice  
+part p_comment  
+partsupp ps_partkey 1 20000000
+partsupp ps_suppkey 1 1000000
+partsupp ps_availqty 1 9999
+partsupp ps_supplycost  
+partsupp ps_comment  
+region r_regionkey 0 4
+region r_name  
+region r_comment  
+revenue0 supplier_no 1 1000000
+revenue0 total_revenue  
+supplier s_suppkey 1 1000000
+supplier s_name  
+supplier s_address  
+supplier s_nationkey 0 24
+supplier s_phone  
+supplier s_acctbal  
+supplier s_comment  

@@ -1,0 +1,60 @@
+{
+    "exchange_parallel_size": {
+        "value": 1,
+        "lower": 1,
+        "upper": 64,
+        "type": "int/continuous"
+    },
+    "exchange_source_pipeline_threads": {
+        "value": 32,
+        "lower": 1,
+        "upper": 64,
+        "type": "int/continuous"
+    },
+    "exchange_local_receiver_queue_size": {
+        "value": 1000000,
+        "lower": 1,
+        "upper": 5000000,
+        "type": "int/continuous"
+    },
+    "exchange_remote_receiver_queue_size": {
+        "value": 500000,
+        "lower": 1,
+        "upper": 5000000,
+        "type": "int/continuous"
+    },
+    "exchange_buffer_send_threshold_in_row": {
+        "value": 35505,
+        "lower": 1,
+        "upper": 600000,
+        "type": "int/continuous"
+    },
+    "exchange_unordered_output_parallel_size": {
+        "value": 36,
+        "lower": 1,
+        "upper": 80,
+        "type": "int/continuous"
+    },
+    "group_by_two_level_threshold": {
+        "value": 500000,
+        "lower": 1,
+        "upper": 1000000,
+        "type": "int/continuous"
+    },
+    "runtime_filter_min_filter_rows": {
+        "value": 10000,
+        "lower": 100,
+        "upper": 1000000,
+        "type": "int/continuous"
+    },
+    "runtime_filter_bloom_build_threshold": {
+        "value": 1024,
+        "lower": 100,
+        "upper": 1000000,
+        "type": "int/continuous"
+    },
+    "join_algorithm": {
+        "value": ["hash", "parallel_hash"],
+        "type": "categorical"
+    }
+}

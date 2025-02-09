@@ -1,0 +1,425 @@
+call_center cc_call_center_sk 1 6
+call_center cc_call_center_id  
+call_center cc_rec_start_date 883612800 1009843200
+call_center cc_rec_end_date 946684800 1009756800
+call_center cc_closed_date_sk
+call_center cc_open_date_sk 2450806 2451063
+call_center cc_name  
+call_center cc_class  
+call_center cc_employees 80137 1714898
+call_center cc_sq_ft 52008913 1122431986
+call_center cc_hours  
+call_center cc_manager  
+call_center cc_mkt_id 2 6
+call_center cc_mkt_class  
+call_center cc_mkt_desc  
+call_center cc_market_manager  
+call_center cc_division 1 5
+call_center cc_division_name  
+call_center cc_company 1 6
+call_center cc_company_name  
+call_center cc_street_number  
+call_center cc_street_name  
+call_center cc_street_type  
+call_center cc_suite_number  
+call_center cc_city  
+call_center cc_county  
+call_center cc_state  
+call_center cc_zip 53604 53604
+call_center cc_country  
+call_center cc_gmt_offset 0 0
+call_center cc_tax_percentage 0 0
+catalog_page cp_catalog_page_sk 1 11718
+catalog_page cp_catalog_page_id  
+catalog_page cp_start_date_sk 2450815 2453005
+catalog_page cp_end_date_sk 2450844 2453186
+catalog_page cp_department  
+catalog_page cp_catalog_number 1 109
+catalog_page cp_catalog_page_number 1 108
+catalog_page cp_description  
+catalog_page cp_type  
+catalog_returns cr_returned_date_sk 2450821 2452923
+catalog_returns cr_returned_time_sk 0 86399
+catalog_returns cr_item_sk 1 28000
+catalog_returns cr_refunded_customer_sk 1 2100000
+catalog_returns cr_refunded_cdemo_sk 1 1920800
+catalog_returns cr_refunded_hdemo_sk 1 7200
+catalog_returns cr_refunded_addr_sk 1 1050000
+catalog_returns cr_returning_customer_sk 1 2100000
+catalog_returns cr_returning_cdemo_sk 1 1920800
+catalog_returns cr_returning_hdemo_sk 1 7200
+catalog_returns cr_returning_addr_sk 1 1050000
+catalog_returns cr_call_center_sk 1 6
+catalog_returns cr_catalog_page_sk 1 9828
+catalog_returns cr_ship_mode_sk 1 20
+catalog_returns cr_warehouse_sk 1 5
+catalog_returns cr_reason_sk 1 36
+catalog_returns cr_order_number 2 79999998
+catalog_returns cr_return_quantity 1 100
+catalog_returns cr_return_amount 0 28805
+catalog_returns cr_return_tax 0 2446
+catalog_returns cr_return_amt_inc_tax 0 29997
+catalog_returns cr_fee 0 100
+catalog_returns cr_return_ship_cost 0 14162
+catalog_returns cr_refunded_cash 0 26496
+catalog_returns cr_reversed_charge 0 24033
+catalog_returns cr_store_credit 0 22920
+catalog_returns cr_net_loss 0 15880
+catalog_sales cs_sold_date_sk 2450815 2452654
+catalog_sales cs_sold_time_sk 0 86399
+catalog_sales cs_ship_date_sk 2450817 2452744
+catalog_sales cs_bill_customer_sk 1 2100000
+catalog_sales cs_bill_cdemo_sk 1 1920800
+catalog_sales cs_bill_hdemo_sk 1 7200
+catalog_sales cs_bill_addr_sk 1 1050000
+catalog_sales cs_ship_customer_sk 1 2100000
+catalog_sales cs_ship_cdemo_sk 1 1920800
+catalog_sales cs_ship_hdemo_sk 1 7200
+catalog_sales cs_ship_addr_sk 1 1050000
+catalog_sales cs_call_center_sk 1 6
+catalog_sales cs_catalog_page_sk 1 9828
+catalog_sales cs_ship_mode_sk 1 20
+catalog_sales cs_warehouse_sk 1 5
+catalog_sales cs_item_sk 1 28000
+catalog_sales cs_promo_sk 1 357
+catalog_sales cs_order_number 1 80000000
+catalog_sales cs_quantity 1 100
+catalog_sales cs_wholesale_cost 1 100
+catalog_sales cs_list_price 1 300
+catalog_sales cs_sales_price 0 300
+catalog_sales cs_ext_discount_amt 0 29925
+catalog_sales cs_ext_sales_price 0 29943
+catalog_sales cs_ext_wholesale_cost 1 10000
+catalog_sales cs_ext_list_price 1 30000
+catalog_sales cs_ext_tax 0 2673
+catalog_sales cs_coupon_amt 0 28693
+catalog_sales cs_ext_ship_cost 0 14994
+catalog_sales cs_net_paid 0 29943
+catalog_sales cs_net_paid_inc_tax 0 32376
+catalog_sales cs_net_paid_inc_ship 0 43777
+catalog_sales cs_net_paid_inc_ship_tax 0 46367
+catalog_sales cs_net_profit 0 19962
+customer c_customer_sk 1 2100000
+customer c_customer_id  
+customer c_current_cdemo_sk 1 1920798
+customer c_current_hdemo_sk 1 7200
+customer c_current_addr_sk 1 1050000
+customer c_first_shipto_date_sk 2449028 2452678
+customer c_first_sales_date_sk 2448998 2452648
+customer c_salutation  
+customer c_first_name  
+customer c_last_name  
+customer c_preferred_cust_flag  
+customer c_birth_day 1 31
+customer c_birth_month 1 12
+customer c_birth_year 1924 1992
+customer c_birth_country  
+customer c_login
+customer c_email_address  
+customer c_last_review_date 2452283 2452648
+customer_address ca_address_sk 1 1050000
+customer_address ca_address_id  
+customer_address ca_street_number  
+customer_address ca_street_name  
+customer_address ca_street_type  
+customer_address ca_suite_number  
+customer_address ca_city  
+customer_address ca_county  
+customer_address ca_state  
+customer_address ca_zip 601 99981
+customer_address ca_country  
+customer_address ca_gmt_offset 0 0
+customer_address ca_location_type  
+customer_demographics cd_demo_sk 1 1920800
+customer_demographics cd_gender  
+customer_demographics cd_marital_status  
+customer_demographics cd_education_status  
+customer_demographics cd_purchase_estimate 500 10000
+customer_demographics cd_credit_rating  
+customer_demographics cd_dep_count 0 6
+customer_demographics cd_dep_employed_count 0 6
+customer_demographics cd_dep_college_count 0 6
+date_dim d_date_sk 2415022 2488070
+date_dim d_date_id  
+date_dim d_date 0 4102444800
+date_dim d_month_seq 0 2400
+date_dim d_week_seq 1 10436
+date_dim d_quarter_seq 1 801
+date_dim d_year 1900 2100
+date_dim d_dow 0 6
+date_dim d_moy 1 12
+date_dim d_dom 1 31
+date_dim d_qoy 1 4
+date_dim d_fy_year 1900 2100
+date_dim d_fy_quarter_seq 1 801
+date_dim d_fy_week_seq 1 10436
+date_dim d_day_name  
+date_dim d_quarter_name  
+date_dim d_holiday  
+date_dim d_weekend  
+date_dim d_following_holiday  
+date_dim d_first_dom 2415021 2488070
+date_dim d_last_dom 2415020 2488372
+date_dim d_same_day_ly 2414657 2487705
+date_dim d_same_day_lq 2414930 2487978
+date_dim d_current_day  
+date_dim d_current_week  
+date_dim d_current_month  
+date_dim d_current_quarter  
+date_dim d_current_year  
+household_demographics hd_demo_sk 1 7200
+household_demographics hd_income_band_sk 1 20
+household_demographics hd_buy_potential  
+household_demographics hd_dep_count 0 9
+household_demographics hd_vehicle_count 0 4
+income_band ib_income_band_sk 1 20
+income_band ib_lower_bound 0 190001
+income_band ib_upper_bound 10000 200000
+inventory inv_date_sk 2450815 2452635
+inventory inv_item_sk 1 28000
+inventory inv_warehouse_sk 1 5
+inventory inv_quantity_on_hand 0 1000
+item i_item_sk 1 28000
+item i_item_id  
+item i_rec_start_date 877910400 1004140800
+item i_rec_end_date 940982400 1004054400
+item i_item_desc  
+item i_current_price 0 99
+item i_wholesale_cost 0 87
+item i_brand_id 1001001 10016017
+item i_brand  
+item i_class_id 1 16
+item i_class  
+item i_category_id 1 10
+item i_category  
+item i_manufact_id 1 1000
+item i_manufact  
+item i_size  
+item i_formulation  
+item i_color  
+item i_units  
+item i_container  
+item i_manager_id 1 100
+item i_product_name  
+promotion p_promo_sk 1 357
+promotion p_promo_id  
+promotion p_start_date_sk 2450100 2450913
+promotion p_end_date_sk 2450132 2450955
+promotion p_item_sk 110 27967
+promotion p_cost 1000 1000
+promotion p_response_target 1 1
+promotion p_promo_name  
+promotion p_channel_dmail  
+promotion p_channel_email  
+promotion p_channel_catalog  
+promotion p_channel_tv  
+promotion p_channel_radio  
+promotion p_channel_press  
+promotion p_channel_event  
+promotion p_channel_demo  
+promotion p_channel_details  
+promotion p_purpose  
+promotion p_discount_active  
+reason r_reason_sk 1 36
+reason r_reason_id  
+reason r_reason_desc  
+ship_mode sm_ship_mode_sk 1 20
+ship_mode sm_ship_mode_id  
+ship_mode sm_type  
+ship_mode sm_code  
+ship_mode sm_carrier  
+ship_mode sm_contract  
+store s_store_sk 1 68
+store s_store_id  
+store s_rec_start_date 858211200 984441600
+store s_rec_end_date 921283200 984355200
+store s_closed_date_sk 2450860 2451288
+store s_store_name  
+store s_number_employees 200 299
+store s_floor_space 5219562 9810608
+store s_hours  
+store s_manager  
+store s_market_id 1 10
+store s_geography_class  
+store s_market_desc  
+store s_market_manager  
+store s_division_id 1 1
+store s_division_name  
+store s_company_id 1 1
+store s_company_name  
+store s_street_number  
+store s_street_name  
+store s_street_type  
+store s_suite_number  
+store s_city  
+store s_county  
+store s_state  
+store s_zip 20059 59231
+store s_country  
+store s_gmt_offset 0 0
+store s_tax_precentage 0 0
+store_returns sr_returned_date_sk 2450820 2452822
+store_returns sr_return_time_sk 28799 61199
+store_returns sr_item_sk 1 28000
+store_returns sr_customer_sk 1 2100000
+store_returns sr_cdemo_sk 1 1920800
+store_returns sr_hdemo_sk 1 7200
+store_returns sr_addr_sk 1 1050000
+store_returns sr_store_sk 1 68
+store_returns sr_reason_sk 1 36
+store_returns sr_ticket_number 1 120000000
+store_returns sr_return_quantity 1 100
+store_returns sr_return_amt 0 19434
+store_returns sr_return_tax 0 1682
+store_returns sr_return_amt_inc_tax 0 20389
+store_returns sr_fee 0 100
+store_returns sr_return_ship_cost 0 9767
+store_returns sr_refunded_cash 0 17569
+store_returns sr_reversed_charge 0 16485
+store_returns sr_store_credit 0 17792
+store_returns sr_net_loss 0 10776
+store_sales ss_sold_date_sk 2450816 2452642
+store_sales ss_sold_time_sk 28800 75599
+store_sales ss_item_sk 1 28000
+store_sales ss_customer_sk 1 2100000
+store_sales ss_cdemo_sk 1 1920800
+store_sales ss_hdemo_sk 1 7200
+store_sales ss_addr_sk 1 1050000
+store_sales ss_store_sk 1 68
+store_sales ss_promo_sk 1 357
+store_sales ss_ticket_number 1 120000000
+store_sales ss_quantity 1 100
+store_sales ss_wholesale_cost 1 100
+store_sales ss_list_price 1 200
+store_sales ss_sales_price 0 200
+store_sales ss_ext_discount_amt 0 19225
+store_sales ss_ext_sales_price 0 19972
+store_sales ss_ext_wholesale_cost 1 10000
+store_sales ss_ext_list_price 1 20000
+store_sales ss_ext_tax 0 1797
+store_sales ss_coupon_amt 0 19225
+store_sales ss_net_paid 0 19972
+store_sales ss_net_paid_inc_tax 0 21769
+store_sales ss_net_profit 0 9986
+time_dim t_time_sk 0 86399
+time_dim t_time_id  
+time_dim t_time 0 86399
+time_dim t_hour 0 23
+time_dim t_minute 0 59
+time_dim t_second 0 59
+time_dim t_am_pm  
+time_dim t_shift  
+time_dim t_sub_shift  
+time_dim t_meal_time  
+warehouse w_warehouse_sk 1 5
+warehouse w_warehouse_id  
+warehouse w_warehouse_name  
+warehouse w_warehouse_sq_ft 138504 977787
+warehouse w_street_number  
+warehouse w_street_name  
+warehouse w_street_type  
+warehouse w_suite_number  
+warehouse w_city  
+warehouse w_county  
+warehouse w_state  
+warehouse w_zip 21904 56098
+warehouse w_country  
+warehouse w_gmt_offset 0 0
+web_page wp_web_page_sk 1 172
+web_page wp_web_page_id  
+web_page wp_rec_start_date 873244800 999475200
+web_page wp_rec_end_date 936316800 999388800
+web_page wp_creation_date_sk 2450798 2450815
+web_page wp_access_date_sk 2452548 2452648
+web_page wp_autogen_flag  
+web_page wp_customer_sk 1898 2098376
+web_page wp_url  
+web_page wp_type  
+web_page wp_char_count 508 7046
+web_page wp_link_count 2 25
+web_page wp_image_count 1 7
+web_page wp_max_ad_count 0 4
+web_returns wr_returned_date_sk 2450819 2453002
+web_returns wr_returned_time_sk 0 86399
+web_returns wr_item_sk 1 28000
+web_returns wr_refunded_customer_sk 1 2100000
+web_returns wr_refunded_cdemo_sk 1 1920800
+web_returns wr_refunded_hdemo_sk 1 7200
+web_returns wr_refunded_addr_sk 1 1050000
+web_returns wr_returning_customer_sk 1 2100000
+web_returns wr_returning_cdemo_sk 1 1920800
+web_returns wr_returning_hdemo_sk 1 7200
+web_returns wr_returning_addr_sk 1 1050000
+web_returns wr_web_page_sk 1 172
+web_returns wr_reason_sk 1 36
+web_returns wr_order_number 1 30000000
+web_returns wr_return_quantity 1 100
+web_returns wr_return_amt 0 29191
+web_returns wr_return_tax 0 2551
+web_returns wr_return_amt_inc_tax 0 29493
+web_returns wr_fee 0 100
+web_returns wr_return_ship_cost 0 14352
+web_returns wr_refunded_cash 0 26466
+web_returns wr_reversed_charge 0 23194
+web_returns wr_account_credit 0 23166
+web_returns wr_net_loss 0 15355
+web_sales ws_sold_date_sk 2450816 2452642
+web_sales ws_sold_time_sk 0 86399
+web_sales ws_ship_date_sk 2450817 2452762
+web_sales ws_item_sk 1 28000
+web_sales ws_bill_customer_sk 1 2100000
+web_sales ws_bill_cdemo_sk 1 1920800
+web_sales ws_bill_hdemo_sk 1 7200
+web_sales ws_bill_addr_sk 1 1050000
+web_sales ws_ship_customer_sk 1 2100000
+web_sales ws_ship_cdemo_sk 1 1920800
+web_sales ws_ship_hdemo_sk 1 7200
+web_sales ws_ship_addr_sk 1 1050000
+web_sales ws_web_page_sk 1 172
+web_sales ws_web_site_sk 1 32
+web_sales ws_ship_mode_sk 1 20
+web_sales ws_warehouse_sk 1 5
+web_sales ws_promo_sk 1 357
+web_sales ws_order_number 1 30000000
+web_sales ws_quantity 1 100
+web_sales ws_wholesale_cost 1 100
+web_sales ws_list_price 1 300
+web_sales ws_sales_price 0 300
+web_sales ws_ext_discount_amt 0 29982
+web_sales ws_ext_sales_price 0 29810
+web_sales ws_ext_wholesale_cost 1 10000
+web_sales ws_ext_list_price 1 30000
+web_sales ws_ext_tax 0 2682
+web_sales ws_coupon_amt 0 28824
+web_sales ws_ext_ship_cost 0 14950
+web_sales ws_net_paid 0 29810
+web_sales ws_net_paid_inc_tax 0 32492
+web_sales ws_net_paid_inc_ship 0 44263
+web_sales ws_net_paid_inc_ship_tax 0 46004
+web_sales ws_net_profit 0 19840
+web_site web_site_sk 1 32
+web_site web_site_id  
+web_site web_rec_start_date 871689600 997920000
+web_site web_rec_end_date 934761600 997833600
+web_site web_name  
+web_site web_open_date_sk 2450543 2450807
+web_site web_close_date_sk 2446944 2448956
+web_site web_class  
+web_site web_manager  
+web_site web_mkt_id 1 6
+web_site web_mkt_class  
+web_site web_mkt_desc  
+web_site web_market_manager  
+web_site web_company_id 1 6
+web_site web_company_name  
+web_site web_street_number  
+web_site web_street_name  
+web_site web_street_type  
+web_site web_suite_number  
+web_site web_city  
+web_site web_county  
+web_site web_state  
+web_site web_zip 21904 59231
+web_site web_country  
+web_site web_gmt_offset 0 0
+web_site web_tax_percentage 0 0
