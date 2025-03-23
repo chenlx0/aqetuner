@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<yandex>
+    <!-- 日志配置 -->
+    <logger>
+        <level>trace</level>
+        <log>/var/log/byconity-server/tso.log</log>
+        <errorlog>/var/log/byconity-server/tso_error.log</errorlog> <!-- 分离错误日志 -->
+        <size>1000M</size>
+        <count>10</count>
+    </logger>
+
+    <listen_host>::</listen_host>
+
+    <!-- TSO 服务配置 -->
+    <tso_service>
+        <type>fdb</type>
+        <port>7779</port> <!-- 与 cnch_config.xml 中的端口一致 -->
+        <fdb>
+                <cluster_file>/960Gssd/wqy/ByConity/fdb_runtime/config/fdb.cluster</cluster_file> <!-- 统一 FoundationDB 路径 -->
+        </fdb>
+        <tso_window_ms>3000</tso_window_ms>
+        <tso_get_leader_info_interval_ms>0</tso_get_leader_info_interval_ms>
+        <tso_max_retry_count>3</tso_max_retry_count>
+    </tso_service>
+
+    <!-- CNCH 配置 -->
+    <cnch_config>/etc/byconity-server/cnch_config.xml</cnch_config>
+</yandex>

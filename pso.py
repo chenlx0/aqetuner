@@ -100,7 +100,7 @@ class SinglePSOSampler(threading.Thread):
                 stats = exec_query(self._sql, self._db, settings)
                 self._res_q.put((id, values, stats))
             except Exception as e:
-                raise e
+                break
 
     def run(self):
         self.consume() if self._is_consumer else self.produce()
@@ -137,7 +137,6 @@ class PSOSampler(object):
             try:
                 t[i].join()
             except Exception as e:
-                print("index error")
                 break
         with open(self.fname, 'a+') as f:
             for values, stats in records:
@@ -161,6 +160,8 @@ if __name__ == "__main__":
     parser.add_argument('--output', '-o')
     parser.add_argument('--threads', '-t', type=int, default=1)
     args = parser.parse_args()
+
+    print("start collecting warm-start samples.")
 
     f = open(args.knob_file)
     knobs = json.load(f)

@@ -5,10 +5,12 @@ from scipy.sparse import csgraph
 from scipy.sparse.linalg import eigsh
 from tree_utils import generate_plan_tree, TreeNet
 
+import os
+
 
 HIDDEN_DIM = 32
-MAX_NODES = 100
-DB = "stats"
+MAX_NODES = 200
+DB = os.getenv('DB')
 
 RowsNorm = 1e7
 
@@ -28,7 +30,8 @@ CKNodeTypes = [
     "EnforceSingleRow",
     "Window",
     "Values",
-    "PartitionTopN"
+    "PartitionTopN",
+    ""
 ]
 
 COMPARATORS = [
@@ -51,7 +54,7 @@ COL_NAME, MIN_MAX = [], []
 class TPair(object):
 
     def __init__(self, json_plan, knobs):
-        self.tree_plan = generate_plan_tree(json_plan)
+        # self.tree_plan = generate_plan_tree(json_plan)
         self.NodeTypes = CKNodeTypes
         self._knobs = knobs
         self._parse_plan(json_plan)
@@ -64,6 +67,8 @@ class TPair(object):
         self.plat_knobs = t.Tensor(knobs)
 
     def _node_to_vec(self, node):
+        if 'NodeType' not in node:
+            node['NodeType'] = ''
         vec_len = len(CKNodeTypes) + 2
         arr = [0. for _ in range(NODE_DIM)]
         stats = {} if 'Statistic' not in node else node['Statistic']

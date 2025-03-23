@@ -11,8 +11,6 @@ from sklearn.model_selection import train_test_split
 
 from torch.utils.data import DataLoader
 
-import matplotlib.pyplot as plt
-
 CUDA = torch.cuda.is_available()
 CHANNELS = 9
 EPOCHS = 100
@@ -98,20 +96,3 @@ if __name__ == "__main__":
     mae = mean_absolute_error(y_test, preds)
     print("mean squared error: {}".format(mse))
     print("mean absolute error: {}".format(mae))
-
-    # depict illustration
-    fig, ax = plt.subplots()
-    x = np.linspace(0, 100, 10)
-    y = x
-
-    ax.plot(x, y, label='x=y', color='orange')
-
-    ax.set_title('Diagonal Line in Subplot')
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_aspect('equal', adjustable='box')
-    ax.scatter(y_test, preds, color='tab:blue', s=3)
-    ax.set_ylabel("Predictions.")
-    ax.set_xlabel("Ground Truth.")
-    ax.set_title("Predictions vs. Ground Truth (seconds)")
-    plt.savefig("test.png")

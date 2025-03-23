@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<yandex>
+    <!-- 日志配置 -->
+    <logger>
+        <level>debug</level>
+        <log>/var/log/byconity-server/resource_manager.log</log>
+        <errorlog>/var/log/byconity-server/resource_manager_error.log</errorlog> <!-- 分离错误日志 -->
+        <size>1000M</size>
+        <count>10</count>
+    </logger>
+
+    <listen_host>::</listen_host>
+
+
+    <!-- Resource Manager 配置 -->
+    <resource_manager>
+        <port>9999</port> <!-- 与 cnch_config.xml 中的端口一致 -->
+        <vws>
+            <vw>
+                <name>vw_default</name>
+                <type>Default</type>
+                <num_workers>1</num_workers> <!-- 2 个 Worker -->
+                <worker_groups>
+                    <worker_group>
+                        <name>vw_default</name> <!-- 与 Server 和 Worker 一致 -->
+                        <type>Physical</type>
+                    </worker_group>
+                </worker_groups>
+            </vw>
+            <vw>
+                <name>vw_write</name>
+                <type>Default</type>
+                <num_workers>1</num_workers> <!-- 2 个 Worker -->
+                <worker_groups>
+                    <worker_group>
+                        <name>vw_write</name> <!-- 与 Server 和 Worker 一致 -->
+                        <type>Physical</type>
+                    </worker_group>
+                </worker_groups>
+            </vw>
+        </vws>
+    </resource_manager>
+
+    <!-- CNCH 配置 -->
+    <cnch_config>/etc/byconity-server/cnch_config.xml</cnch_config>
+</yandex>

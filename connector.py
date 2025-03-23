@@ -1,26 +1,12 @@
 import requests
 import json
 import time
+import os
 
-HOST = 'http://localhost:6725'
+# HOST = 'http://localhost:8123'
+HOST = os.getenv('DB_HOST')
 
-DEFAULT_CONFIG = {
-        "enable_optimizer": 1,
-        "enable_windows_parallel": 1,
-        "send_timeout": 400000,
-        "plan_optimizer_timeout": 60000,
-        "exchange_timeout_ms": 500000,
-        "iterative_optimizer_timeout": 30000000,
-        "receive_timeout": 400000,
-        "cascades_optimizer_timeout": 1000000,
-        "max_memory_usage": 500000000000,
-        "max_execution_time": 150,
-        "use_uncompressed_cache": 1,
-        "merge_tree_max_rows_to_use_cache": 280000000000,
-        "merge_tree_max_bytes_to_use_cache": 400000000000,
-        "distributed_aggregation_memory_efficient": 0,
-        # "dialect_type": "ANSI"
-}
+DEFAULT_CONFIG = json.load(open('fixed_config.json'))
 
 def exec_query(sql: str, db: str, settings={}):
     if sql.endswith(';'):
@@ -57,4 +43,4 @@ def get_query_plan(sql: str, db: str, analyze=False):
     return json.loads(content)
 
 if __name__ == "__main__":
-    print(get_query_plan("select 1", "imdb", analyze=True))
+    print(get_query_plan("select 1", "tpcds", analyze=True))

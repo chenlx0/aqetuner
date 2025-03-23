@@ -29,6 +29,12 @@
         "upper": 600000,
         "type": "int/continuous"
     },
+    "exchange_multi_path_receiver_queue_size": {
+        "value": 36,
+        "lower": 1,
+        "upper": 80,
+        "type": "int/continuous"
+    },
     "exchange_unordered_output_parallel_size": {
         "value": 36,
         "lower": 1,
@@ -53,8 +59,50 @@
         "upper": 1000000,
         "type": "int/continuous"
     },
+    "max_block_size": {
+        "value": 65546,
+        "lower": 10240,
+        "upper": 262144,
+        "type": "int/continuous"
+    },
+    "max_joined_block_size_rows": {
+        "value": 65546,
+        "lower": 10240,
+        "upper": 262144,
+        "type": "int/continuous"
+    },
+    "external_sort_max_block_size": {
+        "value": 65546,
+        "lower": 10240,
+        "upper": 262144,
+        "type": "int/continuous"
+    },
     "join_algorithm": {
         "value": ["hash", "parallel_hash"],
+        "type": "categorical"
+    },
+    "optimize_distributed_group_by_sharding_key": {
+        "value": [0, 1],
+        "type": "categorical"
+    },
+    "exchange_enable_force_keep_order": {
+        "value": [0, 1],
+        "type": "categorical"
+    },
+    "enable_left_deep_join_reorder": {
+        "value": [0, 1],
+        "type": "categorical"
+    },
+    "enable_non_equijoin_reorder": {
+        "value": [0, 1],
+        "type": "categorical"
+    },
+    "enable_join_reorder": {
+        "value": [0, 1],
+        "type": "categorical"
+    },
+    "exchange_force_use_buffer": {
+        "value": [0, 1],
         "type": "categorical"
     }
 }

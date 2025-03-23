@@ -19,7 +19,13 @@ NodeTypes = [
     "Limit",
     "Sorting",
     "CTERef",
-    "Buffer"
+    "Buffer",
+    "Union",
+    "EnforceSingleRow",
+    "Window",
+    "Values",
+    "PartitionTopN",
+    ""
 ]
 
 def get_analyzed_data(path):

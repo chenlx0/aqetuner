@@ -1,18 +1,18 @@
 from tqdm import tqdm
 from network import LatentModel
-from tensorboardX import SummaryWriter
 from torch.utils.data import Dataset, DataLoader
 
 import torch as t
 from torch.utils.data import DataLoader
 from pair_encoder import TPair
+import argparse
 import os
 import json
 import random
 import time
 
-DEVICE = 'cpu'
-DB = 'stats'
+DEVICE = 'cuda' if t.cuda.is_available() else "cpu"
+DB = os.getenv('DB')
 
 # Define Dataset Loader Here
 class CustomDataset(Dataset):
@@ -29,7 +29,7 @@ class CustomDataset(Dataset):
     def __len__(self):
         return len(self.pairs_ctx)
 
-def load_dataset(path, data_size=1000):
+def load_dataset(path, data_size=300):
     pairs, elapsed = [], []
     with open(path) as f:
         line = f.readline()
@@ -88,12 +88,11 @@ def verify(dict_name):
         break
 
         
-def main(file_name):
-    epochs = 3
+def main(file_name, output_path, epochs, lr):
     model = LatentModel(32).to(DEVICE)
     model.train()
     
-    optim = t.optim.Adam(model.parameters(), lr=5e-4)
+    optim = t.optim.Adam(model.parameters(), lr=lr)
     global_step = 0
     train_dataset = load_dataset(file_name)
     for epoch in range(epochs):
@@ -124,10 +123,22 @@ def main(file_name):
         # save model by each epoch    
         t.save({'model':model.state_dict(),
                                  'optimizer':optim.state_dict()},
-                                os.path.join('./checkpoint',f'{DB}.pth.tar'))
+                                os.path.join(output_path))
         print("loss %f" % (loss_accum / len(train_dataset)))
         
         
 if __name__ == '__main__':
-    main(f"data/{DB}_samples")
+    parser = argparse.ArgumentParser(description='Training Knob-Plan Encoder & Dual-Task Predictor')
+    parser.add_argument('--sample_file', type=str, required=True,
+                        help='specifies the file that contains sampled data')
+    parser.add_argument('--model_output', type=str, required=True,
+                        help='specifies the path where the trained model is output')
+    parser.add_argument('--epoch', type=int, required=True,
+                        help='specifies training epochs')
+    parser.add_argument('--lr', type=float, required=True,
+                        help='specifies the learning rate of training')
+
+    args = parser.parse_args()
+    
+    main(f"data/{args.sample_file}", args.model_output, args.epoch, args.lr)
     # verify("checkpoint/stats.pth.tar")

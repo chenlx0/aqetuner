@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<yandex>
+    <!-- 日志配置 -->
+    <logger>
+        <level>debug</level>
+        <log>/var/log/byconity-server/dm.log</log>
+        <errorlog>/var/log/byconity-server/dm_error.log</errorlog> <!-- 分离错误日志 -->
+        <size>1000M</size>
+        <count>10</count>
+    </logger>
+
+    <!-- 数据目录 -->
+    <path>/var/lib/byconity/</path>
+
+    <!-- CNCH 数据保留时间 -->
+    <cnch_data_retention_time_in_sec>5</cnch_data_retention_time_in_sec>
+    <background_schedule_pool_size>6</background_schedule_pool_size>
+
+    <listen_host>::</listen_host>
+
+    <!-- Daemon Manager 配置 -->
+    <daemon_manager>
+        <port>8889</port> <!-- 与 cnch_config.xml 中的端口一致 -->
+        <daemon_jobs>
+            <job>
+                <name>PART_GC</name>
+                <interval>10000</interval>
+                <disable>false</disable>
+            </job>
+            <job>
+                <name>PART_MERGE</name>
+                <interval>10000</interval>
+                <disable>false</disable>
+            </job>
+            <job>
+                <name>CONSUMER</name>
+                <interval>10000</interval>
+                <disable>false</disable>
+            </job>
+            <job>
+                <name>DEDUP_WORKER</name>
+                <interval>10000</interval>
+                <disable>false</disable>
+            </job>
+            <job>
+                <name>PART_CLUSTERING</name>
+                <interval>10000</interval>
+                <disable>false</disable>
+            </job>
+            <job>
+                <name>GLOBAL_GC</name>
+                <interval>5000</interval>
+                <disable>false</disable>
+            </job>
+            <job>
+                <name>TXN_GC</name>
+                <interval>600000</interval>
+                <disable>false</disable>
+            </job>
+        </daemon_jobs>
+    </daemon_manager>
+
+    <!-- 存储配置 -->
+    <storage_configuration>
+        <disks>
+            <default></default> <!-- 本地默认磁盘 -->
+            <local_disk>
+                <path>/960Gssd/wqy/ByConity/server_local_disk/data/0/</path>
+            </local_disk>
+            <hdfs_disk>
+                <type>bytehdfs</type>
+                <path>/user/clickhouse/</path>
+            </hdfs_disk>
+        </disks>
+        <policies>
+            <default>
+                <volumes>
+                    <local>
+                        <default>local_disk</default>
+                        <disk>default</disk>
+                        <disk>local_disk</disk>
+                    </local>
+                </volumes>
+            </default>
+            <cnch_default_hdfs>
+                <volumes>
+                    <hdfs>
+                        <default>hdfs_disk</default>
+                        <disk>hdfs_disk</disk>
+                    </hdfs>
+                </volumes>
+            </cnch_default_hdfs>
+        </policies>
+    </storage_configuration>
+    <!-- CNCH 配置 -->
+    <cnch_config>/etc/byconity-server/cnch_config.xml</cnch_config>
+</yandex>

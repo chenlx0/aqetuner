@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<yandex>
+    <!-- 日志配置 -->
+    <logger>
+        <level>debug</level>
+        <log>/var/log/byconity-server/worker1.log</log>
+        <errorlog>/var/log/byconity-server/worker1_error.log</errorlog>
+        <size>1000M</size>
+        <count>10</count>
+    </logger>
+
+    <!-- Worker 标识和组 -->
+    <WORKER_ID>worker1</WORKER_ID> <!-- 唯一标识，可自定义 -->
+    <WORKER_GROUP_ID>vw_default</WORKER_GROUP_ID>
+    <VIRTUAL_WAREHOUSE_ID>vw_default</VIRTUAL_WAREHOUSE_ID>
+
+    <!-- 端口配置 -->
+    <tcp_port>9010</tcp_port> <!-- Worker 1 的端口 -->
+    <http_port>8125</http_port> <!-- 可选 HTTP 端口，避免与 Server 冲突 -->
+    <rpc_port>8126</rpc_port> <!-- 可选 RPC 端口 -->
+    <ha_tcp_port>9810</ha_tcp_port>
+    <exchange_port>9310</exchange_port>
+    <exchange_status_port>9410</exchange_status_port>
+
+    <vw_name>vw_default</vw_name>
+
+    <listen_host>::</listen_host>
+
+    <!-- 数据目录 -->
+    <path>/var/lib/byconity/worker1/</path>
+    <tmp_path>/var/lib/byconity/worker1/tmp/</tmp_path>
+
+    <!-- 用户配置 -->
+    <users_config>/etc/byconity-server/users.xml</users_config>
+    <default_profile>default</default_profile>
+    <default_database>default</default_database>
+
+    <!-- 时区 -->
+    <timezone>UTC</timezone> <!-- 可根据需要调整 -->
+
+    <!-- CNCH 配置 -->
+    <cnch_type>worker</cnch_type>
+    <cnch_config>/etc/byconity-server/cnch_config.xml</cnch_config> <!-- 共享 Server 的 CNCH 配置 -->
+
+    <!-- 存储配置 -->
+    <storage_configuration>
+        <disks>
+            <default></default> <!-- 本地默认磁盘 -->
+            <local_disk>
+                <path>/960Gssd/wqy/ByConity/server_local_disk/data/0/</path>
+            </local_disk>
+            <hdfs_disk>
+                <type>bytehdfs</type>
+                <path>/user/clickhouse/</path>
+            </hdfs_disk>
+        </disks>
+        <policies>
+            <default>
+                <volumes>
+                    <local>
+                        <default>local_disk</default>
+                        <disk>default</disk>
+                        <disk>local_disk</disk>
+                    </local>
+                </volumes>
+            </default>
+            <cnch_default_hdfs>
+                <volumes>
+                    <hdfs>
+                        <default>hdfs_disk</default>
+                        <disk>hdfs_disk</disk>
+                    </hdfs>
+                </volumes>
+            </cnch_default_hdfs>
+        </policies>
+    </storage_configuration>
+</yandex>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<yandex>
+    <!-- 日志配置 -->
+    <logger>
+        <level>debug</level>
+        <log>/var/log/byconity-server/server.log</log>
+        <errorlog>/var/log/byconity-server/server_error.log</errorlog>
+        <size>1000M</size>
+        <count>10</count>
+    </logger>
+
+    <!-- 端口配置 -->
+    <http_port>8123</http_port>
+    <tcp_port>6669</tcp_port>
+    <!-- 移除未使用的端口，或根据需要调整 -->
+    <rpc_port>8124</rpc_port>
+    <ha_tcp_port>9800</ha_tcp_port>
+    <exchange_port>9300</exchange_port>
+    <exchange_status_port>9400</exchange_status_port>
+
+    <listen_host>::</listen_host>
+
+    <!-- 连接设置 -->
+    <max_connections>4096</max_connections>
+    <keep_alive_timeout>3</keep_alive_timeout>
+    <max_concurrent_queries>100</max_concurrent_queries>
+
+    <!-- 缓存设置 -->
+    <uncompressed_cache_size>8589934592</uncompressed_cache_size>
+    <mark_cache_size>5368709120</mark_cache_size>
+
+    <!-- 数据目录 -->
+    <path>/var/lib/byconity/</path>
+    <tmp_path>/var/lib/byconity/tmp/</tmp_path>
+
+    <!-- 用户配置 -->
+    <users_config>/etc/byconity-server/users.xml</users_config>
+    <default_profile>default</default_profile>
+    <default_database>default</default_database>
+
+    <!-- 时区 -->
+    <timezone>UTC</timezone> <!-- 可根据需要调整 -->
+
+    <!-- CNCH 配置 -->
+    <cnch_type>server</cnch_type>
+    <cnch_config>/etc/byconity-server/cnch_config.xml</cnch_config> <!-- 指向外部 CNCH 配置 -->
+
+    <cnch_enable_server_topology_manager>true</cnch_enable_server_topology_manager>
+
+    <!-- 存储配置 -->
+    <storage_configuration>
+        <disks>
+            <default></default> <!-- 本地默认磁盘 -->
+            <local_disk>
+                <path>/960Gssd/wqy/ByConity/server_local_disk/data/0/</path>
+            </local_disk>
+            <hdfs_disk>
+                <type>bytehdfs</type>
+                <path>/user/clickhouse/</path>
+            </hdfs_disk>
+        </disks>
+        <policies>
+            <default>
+                <volumes>
+                    <local>
+                        <default>local_disk</default>
+                        <disk>default</disk>
+                        <disk>local_disk</disk>
+                    </local>
+                </volumes>
+            </default>
+            <cnch_default_hdfs>
+                <volumes>
+                    <hdfs>
+                        <default>hdfs_disk</default>
+                        <disk>hdfs_disk</disk>
+                    </hdfs>
+                </volumes>
+            </cnch_default_hdfs>
+        </policies>
+    </storage_configuration>
+
+    <!-- Worker 组配置 -->
+    <worker_groups>
+        <worker_group>
+            <name>vw_default</name>
+            <workers>
+                <worker>127.0.0.1:9010</worker>
+            </workers>
+        </worker_group>
+        <worker_group>
+            <name>vw_write</name>
+            <workers>
+                <worker>127.0.0.1:9011</worker>
+            </workers>
+        </worker_group>
+    </worker_groups>
+</yandex>
